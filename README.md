@@ -1,3 +1,2 @@
 # SG_Member
-<hr>
-- exercise for servlet with spring
+exercise for servlet with spring
