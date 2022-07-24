@@ -1,2 +1,2 @@
 # SG_Member
-exercise for servlet with spring
+exercise for servlet & jsp with spring
