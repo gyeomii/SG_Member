@@ -38,6 +38,7 @@ public class index extends HttpServlet {
 	}
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String url = "/WEB-INF/views/loginSuccess.jsp";
 		
 		
 		String id = request.getParameter("id");
@@ -53,17 +54,15 @@ public class index extends HttpServlet {
 			member = memberService.getMember(id, pwd);
 			if(member.getId() == null) {
 				request.setAttribute("msg", "아이디나 비밀번호를 확인하세요");
-				String url = "/WEB-INF/views/index.jsp";
+				url = "/WEB-INF/views/index.jsp";
 				request.getRequestDispatcher(url).forward(request, response);				
 			}else {
 				request.setAttribute("member", member);
-				String url = "/WEB-INF/views/loginSuccess.jsp";
-				request.getRequestDispatcher(url).forward(request, response);				
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}
-				
+		}				
+		request.getRequestDispatcher(url).forward(request, response);				
 	}
 
 }

@@ -24,14 +24,7 @@ public class InsertMember extends HttpServlet {
 		String name = request.getParameter("name");
 		String address = request.getParameter("address");
 		String email = request.getParameter("email");
-		
-		String msg ="";
-		if(pwd.equals(pwdchk)) {
-			msg += "비밀번호가 일치합니다.";
-		}else {
-			msg += "비밀번호가 다릅니다.";
-		}
-		request.setAttribute("msg", msg);
+
 		
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=UTF-8");

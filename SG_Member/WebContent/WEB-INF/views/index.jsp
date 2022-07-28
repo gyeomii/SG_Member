@@ -27,6 +27,7 @@ function goJoin(){
     <label for="inputPassword3" class="col-sm-2 control-label">P/W</label>
     <div class="col-sm-5">
       <input type="password" class="form-control" name="pwd" id="inputPassword3" placeholder="Password">
+	  <h3>${ msg }</h3>
     </div>
   </div>
   <div class="form-group">
@@ -34,7 +35,6 @@ function goJoin(){
       <label for="inputPassword3" class="col-sm-2 control-label"></label>
 	  <input type="button" class="btn btn-primary" value="회원가입" onclick="goJoin()"/>
 	  <input type="submit" class="btn btn-primary" value="로그인" />
-	  <h3>${ msg }</h3>
   	</div>
   </div>
 </form>
